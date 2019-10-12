@@ -28,17 +28,19 @@
   }
 
   /* Create two columns/boxes that floats next to each other */
-  nav {
-  float: left;
-  width: 30%;
-  background: #ccc;
-  padding: 20px;
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
   }
 
-  /* Style the list inside the menu */
-  nav ul {
-  list-style-type: none;
-  padding: 0;
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
   }
 
   article {
@@ -97,10 +99,8 @@
   </header>
 
   <section>
-    <nav>
-      <ul>
 
-
+      <div class="topnav">
         <li style="max-width:150%;"><a href="#">Home</a></li>
 
         <li style="max-width:150%;"><a href="#">About</a></li>
@@ -108,9 +108,7 @@
         <li style="max-width:150%;"><a href="randomgen.html">Random Generator</a></li>
 
         <li style="max-width:150%;"><a href="#">Contact Us</a></li>
-      </ul>
-
-    </nav>
+      </div>
 
     <article>
       <h1>About</h1>
