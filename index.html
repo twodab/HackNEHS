@@ -49,13 +49,6 @@
     color: black;
   }
 
-  article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #f1f1f1;
-  }
-
     /* Create three equal columns that floats next to each other */
   .column {
     float: left;
@@ -69,16 +62,6 @@
     content: "";
     display: table;
     clear: both;
-  }
-
-
-  /* Style the footer */
-  footer {
-  background-color: #777;
-  padding: 20px;
-  width: 100%;
-  text-align: center;
-  color: white;
   }
 
   /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
@@ -110,11 +93,11 @@
       <div class="topnav">
         <a href="#">Home</a>
 
-        <a href="#">About</a>
+        <a href="about.html">About</a>
 
         <a href="randomgen.html">Random Generator</a>
 
-        <<a href="#">Contact Us</a>
+        <a href="contact.html">Contact Us</a>
       </div>
 
   <div class="row">
@@ -133,17 +116,5 @@
     <p>By: Chris, Ricky, Neth, Luis</p>
   </div>
 
-<script language="javascript">
-  var words = ['Horse',
-  'Pig',
-  'Dog',
-  'Cat',
-  'Parrot',
-  'Iguana'
-  ];
-  function randomWord(arr) {
-      return arr[Math.floor(Math.random() * arr.length)];
-  }
 
-  for(var x=0; x<20; x++)
-      console.log(randomWord(words));
+  }
