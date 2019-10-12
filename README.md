@@ -1,1 +1,0 @@
-# HackNEHS
