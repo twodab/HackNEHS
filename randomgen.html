@@ -1,56 +1,229 @@
-<STYLE TYPE="text/css">
-INPUT {font-family : Courier, Monospace}
-</STYLE>
+<!<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<TITLE> Random Letter Sequence Generator </TITLE>
+<style>
 
-<SCRIPT LANGUAGE="JavaScript" SRC="random.js"></SCRIPT>
+  * {
+    box-sizing: border-box;
+    text-align:center;
+    font-family:Helvetica;
+  }
 
-<SCRIPT LANGUAGE="JavaScript">
-function generateRandSeq(len, letters)
-// Assumes: len >= 0
-// Returns: random sequence of letters, length len
-{
-var i, seq = "";
-for (i = 1; i <= len; i = i + 1) {
-    seq += randomChar(letters);
-}
-return seq;
-}
-</SCRIPT>
-</HEAD>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
 
-<BODY>
-<CENTER>
-<H2>Random Letter Sequence Generator</H2>
+  /* Style the header */
+  .header {
+  background-color: #666;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  }
 
-<HR>
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
 
-<FORM NAME="generator">
-<TABLE>
-<TR>
-<TD>Number of random letter sequences to generate:
-<TD><INPUT TYPE="text" NAME="numSeq" SIZE=4 VALUE=1>
-<TR>
-<TD>Length of each random letter sequence:
-<TD><INPUT TYPE="text" NAME="lenSeq" SIZE=2 VALUE=3>
-<TR>
-<TD>Letters to choose from:
-<TD><INPUT TYPE="text" NAME="letters" SIZE=26 VALUE="abcdefghijklmnopqrstuvwxyz">
-</TABLE>
+  /* Create two columns/boxes that floats next to each other */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
 
-<P>
-<INPUT TYPE="button" VALUE="Click to generate letter sequences"
- ONCLICK="document.generator.output.value = '';
-          for(i=1;i<=document.generator.numSeq.value;i=i+1) {
-            document.generator.output.value +=
-                  generateRandSeq(document.generator.lenSeq.value,
-                                  document.generator.letters.value) + ' ';
-          };">
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
 
-<P>
-<TEXTAREA NAME="output" ROWS=10 COLS=40 WRAP VALUE=""></TEXTAREA>
+    /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 15px;
+    background-color: #f1f1f1;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+
+  }
+
+  /* Style the footer */
+  .footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+  }
+
+</style>
+
+  <head>
+    <title>Random Event Generator</title>
+    <body>
+
+    <div class="header">
+      <h3>Random Act Generator</h3>
+    </div>
+
+        <div class="topnav">
+          <a href="index.html">Home</a>
+
+          <a href="about.html">About</a>
+
+          <a href="randomgen.html">Random Generator</a>
+
+          <a href="contact.html">Contact Us</a>
+        </div>
+
+
+    <div class="row">
+      <div class="column">
+
+      </div>
+
+    <div class="footer">
+      <p>By: Chris, Ricky, Neth, Luis</p>
+    </div>
+
+<h1>Random Word Generator</h1>
+
+<FORM NAME="WordForm">
+<INPUT TYPE=TEXT NAME="WordBox" id="wordbox"><BR>
+<INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="button">
 </FORM>
-</CENTER>
 
-</BODY>
+<style>
+
+body {
+font-family: Verdana, Geneva, sans-serif;
+font-size: 1.2em;
+margin: 0 auto;
+max-width: 960px;
+padding: 40px 10px;
+line-height: 1.65em;
+background: #B20940;
+color: #fff;
+font-weight: 300;
+}
+
+h1 {
+text-align: center;
+margin: 20% 0 5% 0;
+}
+
+#wordbox {
+  /*opacity: 0;*/
+  margin: 30px auto 0;
+  display: block;
+  width: 300px;
+  height: 40px;
+  font-size: 30px;
+  text-align: center;
+  background: #fff;
+  border-radius: 6px;
+  color: #black;
+  transition: 1s linear;
+}
+
+#button {
+background: #0b7fba;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  padding: 1em 2em;
+  cursor: pointer;
+  margin: 0 auto 60px;
+  display: block;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+</style>
+
+<script language="javascript">
+
+var NumberOfWords = 28
+
+var words = new BuildArray(NumberOfWords)
+
+// Use the following variables to
+// define your random words:
+words[1] = "escapology"
+words[2] = "brightwork"
+words[3] = "verkrampte"
+words[4] = "protectrix"
+words[5] = "nudibranch"
+words[6] = "grandchild"
+words[7] = "newfangled"
+words[8] = "flugelhorn"
+words[9] = "mythologer"
+words[10] = "pluperfect"
+words[11] = "jellygraph"
+words[12] = "quickthorn"
+words[13] = "rottweiler"
+words[14] = "technician"
+words[15] = "cowpuncher"
+words[16] = "middlebrow"
+words[17] = "jackhammer"
+words[18] = "triphthong"
+words[19] = "wunderkind"
+words[20] = "dazzlement"
+words[21] = "jabberwock"
+words[22] = "witchcraft"
+words[23] = "pawnbroker"
+words[24] = "thumbprint"
+words[25] = "motorcycle"
+words[26] = "cryptogram"
+words[27] = "torchlight"
+words[28] = "bankruptcy"
+
+function BuildArray(size){
+this.length = size
+for (var i = 1; i <= size; i++){
+this[i] = null}
+return this
+}
+
+function PickRandomWord(frm) {
+// Generate a random number between 1 and NumberOfWords
+var rnd = Math.ceil(Math.random() * NumberOfWords)
+// Display the word inside the text box
+//rm.WordBox.value = words[rnd];
+
+document.getElementById("wordbox").value = words[rnd];
+}
+
+
+</script>
+<h1>Random Word Generator</h1>
+
+<FORM NAME="WordForm">
+<INPUT TYPE=TEXT NAME="WordBox" id="wordbox"><BR>
+<INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="button">
+</FORM>
