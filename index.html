@@ -101,7 +101,7 @@
   <body>
 
   <header>
-    <h2>Welcome to the Environmentally Friendly Rhinos</h2>
+    <h2>Environmentally Friendly Rhinos</h2>
   </header>
 
   <section>
@@ -117,7 +117,7 @@
       </div>
 
     <article>
-      <h1>About</h1>
+      <h1>Our Objective</h1>
       <p> The environment is turing in to a waste land filled with wrapers, plastic, and other trash. As four high schoolers we want to help restore the environment and live in a clean socitey. We created a random task for our reader, like pick up a wrapper on the ground. These little acts will add up to save our planet from becoming a gross and poluted world.</p>
       <p>They are going extinct!</p>
       <img src="https://media.npr.org/assets/img/2013/12/28/Black%20Rhino-7052256d72b06969c1348a0f9e1c22aa42c88949-s800-c85.jpg">
@@ -125,8 +125,107 @@
   </section>
 
   <footer>
-    <p>Footer</p>
+    <p>By: Chris, Ricky, Neth, Luis</p>
   </footer>
 
   </body>
   </html>
+  <h1>Random Word Generator</h1>
+
+<FORM NAME="WordForm">
+<INPUT TYPE=TEXT NAME="WordBox" id="wordbox"><BR>
+<INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="button">
+</FORM>
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.2em;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 40px 10px;
+  line-height: 1.65em;
+  background: #B20940;
+  color: #fff;
+  font-weight: 300;
+}
+
+h1 {
+  text-align: center;
+  margin: 20% 0 5% 0;
+}
+
+#wordbox {
+    /*opacity: 0;*/
+    margin: 30px auto 0;
+    display: block;
+    width: 300px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+    background: #fff;
+    border-radius: 6px;
+    color: #black;
+    transition: 1s linear;
+}
+
+#button {
+  background: #0b7fba;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    padding: 1em 2em;
+    cursor: pointer;
+    margin: 0 auto 60px;
+    display: block;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+}
+var NumberOfWords = 28
+
+var words = new BuildArray(NumberOfWords)
+
+// Use the following variables to
+// define your random words:
+words[1] = "escapology"
+words[2] = "brightwork"
+words[3] = "verkrampte"
+words[4] = "protectrix"
+words[5] = "nudibranch"
+words[6] = "grandchild"
+words[7] = "newfangled"
+words[8] = "flugelhorn"
+words[9] = "mythologer"
+words[10] = "pluperfect"
+words[11] = "jellygraph"
+words[12] = "quickthorn"
+words[13] = "rottweiler"
+words[14] = "technician"
+words[15] = "cowpuncher"
+words[16] = "middlebrow"
+words[17] = "jackhammer"
+words[18] = "triphthong"
+words[19] = "wunderkind"
+words[20] = "dazzlement"
+words[21] = "jabberwock"
+words[22] = "witchcraft"
+words[23] = "pawnbroker"
+words[24] = "thumbprint"
+words[25] = "motorcycle"
+words[26] = "cryptogram"
+words[27] = "torchlight"
+words[28] = "bankruptcy"
+
+function BuildArray(size){
+this.length = size
+for (var i = 1; i <= size; i++){
+this[i] = null}
+return this
+}
+
+function PickRandomWord(frm) {
+// Generate a random number between 1 and NumberOfWords
+var rnd = Math.ceil(Math.random() * NumberOfWords)
+
+// Display the word inside the text box
+frm.WordBox.value = words[rnd]
+}
